@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: The best case, sorted50000, took lower time to sort than the random50000 and reversed50000
+
+sort2 uses: Merge sort
+
+How do you know?: It took the lowest time amongst the three algorithms when sorting reversed50000.txt
+
+sort3 uses: Selection sort
+
+How do you know?: The best case, sorted50000, still took relatively equal amount of time to the random50000 and reversed50000
