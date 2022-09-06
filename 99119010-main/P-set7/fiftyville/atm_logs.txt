@@ -1,0 +1,13 @@
++---------+----------------+--------+------------------+
+|  name   | account_number | amount | transaction_type |
++---------+----------------+--------+------------------+
+| Bruce   | 49610011       | 50     | withdraw         |
+| Kaelyn  | 86363979       | 10     | deposit          |
+| Diana   | 26013199       | 35     | withdraw         |
+| Brooke  | 16153065       | 80     | withdraw         |
+| Kenny   | 28296815       | 20     | withdraw         |
+| Iman    | 25506511       | 20     | withdraw         |
+| Luca    | 28500762       | 48     | withdraw         |
+| Taylor  | 76054385       | 60     | withdraw         |
+| Benista | 81061156       | 30     | withdraw         |
++---------+----------------+--------+------------------+

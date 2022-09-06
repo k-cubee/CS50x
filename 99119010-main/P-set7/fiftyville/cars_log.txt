@@ -1,0 +1,25 @@
++---------+----------+--------+
+|  name   | activity | minute |
++---------+----------+--------+
+| Brandon | entrance | 8      |
+| Sophia  | entrance | 14     |
+| Vanessa | exit     | 16     |
+| Bruce   | exit     | 18     |
+| Barry   | exit     | 18     |
+| Luca    | exit     | 19     |
+| Sofia   | exit     | 20     |
+| Iman    | exit     | 21     |
+| Diana   | exit     | 23     |
+| Kelsey  | exit     | 23     |
+| Taylor  | exit     | 35     |
+| Denise  | entrance | 42     |
+| Thomas  | entrance | 44     |
+| Jeremy  | entrance | 55     |
++---------+----------+--------+
++--------+
+|  name  |
++--------+
+| Bruce  |
+| Diana  |
+| Taylor |
++--------+
