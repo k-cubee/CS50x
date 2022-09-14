@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Arrays for choices and answers
+            const choices = ["Sophia", "Philip", "Bruce", "Tyler", "Robin"];
+            const answer = ["Bruce", "Robin"];
+
+            // Waits for the content to load first
+            document.addEventListener("DOMContentLoaded", () => {
+                // Loads the questions and choices
+                load_question();
+
+                // Gets the loaded buttons and choices
+                const buttons = document.querySelectorAll(".option");
+
+                // Applies color change functions
+                buttons.forEach(option = change_color_mcq);
+                document.querySelector("#submit").onclick = () => {
+                    change_color_frq();
+                    return false;
+                }
+            });
+
+            const buttons = document.querySelectorAll(".option");
+            function change_color_mcq(option) {
+                // When clicked,
+                option.onclick = () => {
+                    // If the content between the button tags are the same as answer turn green
+                    if (option.innerHTML === answer[0])
+                    {
+                        option.style.backgroundColor = "green";
+                        document.querySelector("#feedback1").innerHTML = "<p>Correct!</p>"
+                    }
+
+                    // Otherwise turn red
+                    else
+                    {
+                        option.style.backgroundColor = "red";
+                        document.querySelector("#feedback1").innerHTML = "<p>Incorrect</p>"
+                    }
+                }
+            }
+
+            function change_color_frq() {
+                // If whatever was typed in the form is the same as the answer, turn green
+                if (essay.value === answer[1])
+                {
+                    essay.style.backgroundColor = "green";
+                    document.querySelector("#feedback2").innerHTML = "<p>Correct!</p>"
+                }
+
+                // Otherwise turn red
+                else
+                {
+                    essay.style.backgroundColor = "red";
+                    document.querySelector("#feedback2").innerHTML = "<p>Incorrect</p>"
+                }
+            }
+
+            function load_question() {
+                // Generates a multiple choice question
+                document.querySelector("#mcq").innerHTML = "What is the name of the theif in Fiftyville?";
+                const options = document.querySelector("#options");
+
+                // Loops through the choices array
+                for (const choice of choices) {
+                    options.innerHTML += `<button class="option">${choice}</button>`;
+                }
+
+                // Generates a free response question
+                document.querySelector("#frq").innerHTML = "What is the name of their accomplice?";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3 id="mcq"></h3>
+                <div id="options"></div>
+                <div id="feedback1"></div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3 id="frq"></h3>
+                <form>
+                    <input id="essay" type="text" placeholder="Answer" autocomplete="off">
+                    <button id="submit">Submit</button>
+                </form>
+                <div id="feedback2"></div>
+            </div>
+        </div>
+    </body>
+</html>
